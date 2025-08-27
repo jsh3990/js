@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 구구단을 입력받아, 입력받은 구구단을 출력해주세요.
+
+        let dan = parseInt( prompt("만들 구구단 단수를 입력해주세요") );
+        document.write( "<h3>" + dan + "단</h3>" );
+
+        let i = 1
+        while (i <= 9) {
+            // document.write(dan, " x ", i, " = ", dan*i, "<br>");
+            // 빽틱 - ES6
+            document.write(`${dan} x ${i} = ${dan*i} <br>`)
+            i++;
+        }
+
+    </script>
+</body>
+</html>

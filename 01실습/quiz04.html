@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /* 
+        두 수를 입력 받아서, 큰 수와 작은 수를 출력해주면 된다.
+        단 만약 같은 수라면 "같은 수 입니다"를 출력한다.
+        */
+
+        let a = parseInt( prompt("a 값을 입력하세요") );
+        let b = parseInt( prompt("b 값을 입력하세요") );
+
+        if( a > b ) {
+            document.write(a,"(a)가 ", b, "(b)보다 크다");
+        } else if ( a == b ) {    
+            document.write("a와 b는 같은 수 입니다.");
+        } else {
+            document.write(b,"(b)가 ", a, "(a)보다 크다");
+        }
+
+    </script>
+
+
+</body>
+</html>
