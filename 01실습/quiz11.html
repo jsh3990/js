@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>덧셈해보실분?</h3>
+
+    <script>
+        let x = 0; // 정답 횟수
+        let y = 0; // 오답 횟수
+        
+        while(true) {
+            let a = parseInt( Math.random() * 100 + 1 );
+            let b = parseInt( Math.random() * 100 + 1 );
+            let answer = parseInt( prompt(`${a} + ${b} = ? \n[문제를 그만 푸시려면 0을 입력하세요]`) );
+            let correct = a + b; //실제 정답
+    
+            
+            if (answer === 0) { // 0 입력하면 종료 
+                break; 
+            }
+            
+            if ( answer === correct ) {
+                alert("정답입니다."); 
+                x++;
+            } 
+            else {
+                alert("오답입니다.");
+                y++;
+            }
+        }
+        document.write(`정답횟수: ${x} <br>오답횟수: ${y}`);
+
+    </script>
+
+
+</body>
+</html>
