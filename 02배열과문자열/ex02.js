@@ -38,4 +38,13 @@ if(arr.includes('a')) { //a가 있다면 true, 없으면 false
     
 }
 
+//배열의 병합 (합치기)
+let arr3 = [4, 5, 10];
+let arr4 = [1, 2, 3];
 
+let result = arr3.concat(arr4); //두 배열을 합친 새로운 배열을 반환
+console.log(result);
+
+//배열의 정렬 - 오름차순정렬
+result.sort(); //정렬 진행해!
+console.log(result); //단 - 사전순으로 정렬된다.

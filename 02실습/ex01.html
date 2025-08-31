@@ -14,16 +14,16 @@
         3. 그만을 입력하면, 반복문을 종료하고, 입력받은 배열을 출력
         */
 
-        let arr = []
+        let arr = [];
         while (true) {
             let food = prompt("먹고 싶은 음식 \n그만을 입력하면 종료");
 
             if (food === "그만"){
                 break;
             }
-            arr.push(food);
+            arr.push(food); //배열에 마지막에 추가
         }
-        document.write(arr);
+        document.write("먹고 싶은 음식은: [ ", arr, " ]");
 
     </script>
 
