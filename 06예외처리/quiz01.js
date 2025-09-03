@@ -4,16 +4,14 @@
 3. 유저객체 안에 name값이 정상값이라면, 유저의 이름을 반환하면 된다.
 */
 
-function registUser(user) {
+function registUser(obj) {
     try {
-    if (user.name.length === 0) {
-        throw new Error("이름이 비어있으면 안 된다.")
+    if (obj.name.length <= 2 || obj.name == null) {
+        //예외생성
+        throw new Error("이름은 3글자 이상이여야한다.")
     }
 
-    if (user.name.length <= 2) {
-        throw new Error("이름은 2글자 이하이면 안 된다.")
-    }
-    return user.name;
+    return obj.name;
 
     } catch (error) {
         console.log(error.message);
