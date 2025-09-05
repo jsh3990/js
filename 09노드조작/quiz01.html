@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .show {
+            display: none;
+        }
+
+        .red-btn {
+            border: none;
+            background-color: red;
+            color: white;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <h3>할일 목록 만들기</h3>
+    <form class="nameForm">
+        <h3 class="nameTitle"></h3>
+        <input type="text" id="nameInput" placeholder="이름을 입력하세요">
+        <button type="button" id="nameBtn">확인</button>
+    </form>
+
+    <br>
+    <input type="text" id="textInput" placeholder="당신의 할일을 적으세요">
+    <button type="button" id="add">확인</button>
+
+    <ul class="box">
+
+    </ul>
+    
+
+    <script>
+        let nameForm = document.querySelector(".nameForm")
+        let nameTitle = document.querySelector(".nameTitle")
+        let nameInput = document.getElementById("nameInput");
+        let nameBtn = document.querySelector("#nameBtn");
+
+        let textInput = document.getElementById("textInput");
+        let add = document.querySelector("#add");
+
+        let box = document.querySelector(".box");
+
+        nameBtn.addEventListener("click", function () {
+            nameTitle.innerHTML = nameInput.value + "님 안녕하세요";
+            nameInput.classList.add("show");
+            nameBtn.classList.add("show");
+        });
+        
+        add.addEventListener("click", function () {
+            let li = document.createElement("li");
+            let text = textInput.value;
+            li.innerHTML = text;
+            textInput.value = "";
+
+            let button = document.createElement("button");
+            button.innerHTML = "X 떠블클릭";
+            button.className = "red-btn";
+            li.appendChild(button);
+
+            box.appendChild(li);
+        });
+
+
+    </script>
+
+
+</body>
+</html>
