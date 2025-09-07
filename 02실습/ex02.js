@@ -76,6 +76,5 @@ let word = ['apple', 'banana', 'melon', 'grape', 'orange'];
 let wordLength = []; //5, 6, 5, 5, 6 문자열 길이는 문자열.length
 
 for (let v of word) {
-    console.log(v.length);
-    
+    wordLength.push(v.length);    
 }
