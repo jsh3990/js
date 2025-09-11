@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -13,7 +18,7 @@ body {
     height: 100%;
     margin: 0;
     border-right: 1px solid #777;
-    background-color: #ffff;
+    background-color: #F7D157;
     position: fixed;
     top: 0;
     left: 0;
@@ -38,3 +43,69 @@ body {
     gap: 20px;
 }
 
+.user {
+    width: 100%;                    
+    align-items: center;      
+    text-align: center;                    
+}
+
+.profile {
+    width: 120px;
+    height: 120px;
+}
+
+.user-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.followBtn {
+    padding: 5px 10px;
+    border: none;
+    background-color: skyblue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.follwer ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 16px;
+}
+
+.post {
+    display: flex;
+    flex-wrap: wrap;              
+    gap: 20px;
+    width: 900px;                 
+    margin: 20px auto 0 auto;     
+}
+
+.content {
+    width: 250px;                 
+    display: flex;
+    flex-direction: column;
+    align-items: center;          
+    text-align: center;
+}
+
+.content img {
+    width: 250px;
+    height: 250px;
+}
+
+.content p {
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}

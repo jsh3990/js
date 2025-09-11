@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 html {
     height: 100%;
 }
@@ -43,8 +48,8 @@ body {
 
 
 .error {
-    border-color: #dc3545;
-    background-color: #fff5f5;
+    border-color: #dc3545 !important;
+    background-color: #fff5f5 !important;
 }
 .success {
     border-color: #28a745;
@@ -65,17 +70,21 @@ body {
 }
 
 .login-box {
-    width: 300px;
+    width: 500px;
     background-color: #FFFF;
     padding: 40px;
     margin-left: 200px;
 
     display: flex;
-    flex-direction: column; /* 수직으로 쌓기 */
-    align-items: center;    /* 수평 가운데 정렬 */
+    flex-direction: column; 
+    align-items: center;    
     text-align: center;
 
     /* border: 1px solid #777; */
+}
+
+.login-img  div {
+    font-size: 30px;
 }
 
 .login-img {
@@ -85,6 +94,10 @@ body {
 .login-box button {
     background-color: #FBA62C;
     color: #FFFF;
+}
+
+.login-box input:focus {
+    outline: none;
 }
 
 .login {
@@ -104,17 +117,42 @@ input {
     width: 230px;
     height: 30px;
     margin-left: 10px;
+    
 }
+
 
 button {
     width: 300px;
-    height: 30px;
+    height: 45px;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 button:hover {
     background-color: #FF5D00;
+}
+
+.naver {
+    width: 300px;
+    height: 45px;
+    background-image: url(img/naver.png);
+    background-repeat: no-repeat;
+    background-color: #03C75A;
+    border-radius: 5px;
+    background-position: center;
+    margin-bottom: 5px;
+}
+
+.kakao {
+    width: 300px;
+    height: 45px;
+    background-image: url(img/kakao.png);
+    background-repeat: no-repeat;
+    background-color: #FEE500;
+    border-radius: 5px;
+    background-position: center;
+    margin-bottom: 5px;
 }
 
 .login-link {

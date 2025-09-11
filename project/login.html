@@ -48,7 +48,7 @@
 
         <div class="bottom">
             <div class="mypage">
-                <a href="#">
+                <a href="mypage.html">
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M41.6667 43.75V39.5833C41.6667 37.3732 40.7887 35.2536 39.2259 33.6908C37.6631 32.128 35.5435 31.25 33.3333 31.25H16.6667C14.4565 31.25 12.3369 32.128 10.7741 33.6908C9.21131 35.2536 8.33333 37.3732 8.33333 39.5833V43.75M33.3333 14.5833C33.3333 19.1857 29.6024 22.9167 25 22.9167C20.3976 22.9167 16.6667 19.1857 16.6667 14.5833C16.6667 9.98096 20.3976 6.25 25 6.25C29.6024 6.25 33.3333 9.98096 33.3333 14.5833Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -69,14 +69,16 @@
             <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.4167 32.0833V20.4167C20.4167 16.5489 21.9531 12.8396 24.688 10.1047C27.4229 7.3698 31.1323 5.83334 35 5.83334C38.8677 5.83334 42.5771 7.3698 45.312 10.1047C48.0469 12.8396 49.5833 16.5489 49.5833 20.4167V32.0833M14.5833 32.0833H55.4167C58.6383 32.0833 61.25 34.695 61.25 37.9167V58.3333C61.25 61.555 58.6383 64.1667 55.4167 64.1667H14.5833C11.3617 64.1667 8.75 61.555 8.75 58.3333V37.9167C8.75 34.695 11.3617 32.0833 14.5833 32.0833Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
+            <div>로그인</div>
         </div>
+        <br>
         <div class="login">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M32 42V38C32 35.8783 31.1571 33.8434 29.6569 32.3431C28.1566 30.8429 26.1217 30 24 30H10C7.87827 30 5.84344 30.8429 4.34315 32.3431C2.84285 33.8434 2 35.8783 2 38V42M34 22L38 26L46 18M25 14C25 18.4183 21.4183 22 17 22C12.5817 22 9 18.4183 9 14C9 9.58172 12.5817 6 17 6C21.4183 6 25 9.58172 25 14Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <div class="email-form">
-                <input type="email" id="email" placeholder="이메일"> <br>
-                <div class="error-message"></div>
+                <input type="email" id="email" placeholder="이메일 ex) example@domain.com"> <br>
+                <div class="error-message" id="email-error"></div>
             </div>
             
         </div>
@@ -88,13 +90,16 @@
             </svg>
             <div class="pw-form">
                 <input type="password" id="password" placeholder="비밀번호">
-                <div class="error-message"></div>
+                <div class="error-message" id="password-error"></div>
             </div>
             
         </div>
         <br>
 
         <button type="button"><a href="#"></a>로그인</button>
+        <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/" class="naver"></a>
+        <a href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount&talk_login=#login" class="kakao">
+</a>
 
         <div class="login-link">
             <div class="left">
@@ -114,7 +119,13 @@
 
         email.addEventListener("input", function() {
             let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            let emailError = document.querySelector(".error-message");
+            let emailError = document.getElementById("email-error");
+
+            if (email.value === "") {
+                email.classList.remove('error', 'success');
+                emailError.style.display = "none";
+                return; 
+            }
 
             if( !emailRegex.test(email.value)) {
                 email.classList.add('error');
@@ -122,19 +133,34 @@
                 emailError.textContent = "유효한 이메일 형식을 입력해주세요";
                 emailError.style.display = "block";
                 emailSuccess.style.display = "none";
+            } else {
+                email.classList.add('success');
+                email.classList.remove('error');
+                emailSuccess.style.display = "block";
+                emailError.style.display = "none";
             }
 
         });
 
         password.addEventListener("input", function() {
             let pwRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-            let pwError = document.querySelector(".error-message");
+            let pwError = document.getElementById("password-error");
+
+            if (password.value === "") {
+                password.classList.remove('error', 'success');
+                pwError.style.display = "none";
+                return; 
+            }
 
              if( !pwRegex.test(password.value)) {
                 password.classList.add('error');
                 password.classList.remove('success');
                 pwError.textContent = "비밀번호는 8자 이상, 영문+숫자+특수문자를 포함해야 합니다.";
                 pwError.style.display = "block";
+            } else  {
+                password.classList.add('success');
+                password.classList.remove('error');
+                pwError.style.display = "none";
             }
 
         });
