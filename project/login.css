@@ -1,0 +1,140 @@
+html {
+    height: 100%;
+}
+
+.menu {
+    width: 100px;
+    height: 100%;
+    margin: 0;
+    border-right: 1px solid #777;
+    background-color: #F7D157;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;        
+    justify-content: space-between; 
+    padding: 50px 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.menu .top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    height: 100%;
+    margin: 0;
+    background-color: #ffff;
+}
+
+
+.error {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+.success {
+    border-color: #28a745;
+    background-color: #f8fff9;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+.success-message {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.login-box {
+    width: 300px;
+    background-color: #FFFF;
+    padding: 40px;
+    margin-left: 200px;
+
+    display: flex;
+    flex-direction: column; /* 수직으로 쌓기 */
+    align-items: center;    /* 수평 가운데 정렬 */
+    text-align: center;
+
+    /* border: 1px solid #777; */
+}
+
+.login-img {
+    text-align: center;
+    width: 300px;
+}
+.login-box button {
+    background-color: #FBA62C;
+    color: #FFFF;
+}
+
+.login {
+    background-color: #FFFF;
+    display: flex;
+    align-items: center;
+}
+
+.pw {
+    background-color: #FFFF;
+    display: flex;
+    align-items: center;
+    
+}
+
+input {
+    width: 230px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+button {
+    width: 300px;
+    height: 30px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #FF5D00;
+}
+
+.login-link {
+    overflow: hidden;
+    width: 300px;
+}
+
+.login-link a {
+    color: black;
+}
+
+.login-link a:hover{
+    color: gray;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
