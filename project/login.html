@@ -62,8 +62,8 @@
                 </a>
             </div>
         </div>
-        
     </div>
+
     <div class="login-box">
         <div class="login-img">
             <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -136,10 +136,8 @@
             } else {
                 email.classList.add('success');
                 email.classList.remove('error');
-                emailSuccess.style.display = "block";
                 emailError.style.display = "none";
             }
-
         });
 
         password.addEventListener("input", function() {
@@ -152,7 +150,7 @@
                 return; 
             }
 
-             if( !pwRegex.test(password.value)) {
+            if( !pwRegex.test(password.value)) {
                 password.classList.add('error');
                 password.classList.remove('success');
                 pwError.textContent = "비밀번호는 8자 이상, 영문+숫자+특수문자를 포함해야 합니다.";
@@ -162,7 +160,6 @@
                 password.classList.remove('error');
                 pwError.style.display = "none";
             }
-
         });
     </script>
 </body>
