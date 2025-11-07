@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 제이쿼리 링크 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <script>
+        //js - window.onload = 이벤트, 또는 DomLoaded 이벤트
+        //jquery - 도큐먼트레디 - 화면 로드가 끝난 이후에 동작됨 ,여러번 사용해도 됨
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                alert("1111");
+            });
+        });
+
+        
+    </script>
+</head>
+<body>
+    
+    <button type="button" id="btn">도큐먼트레디</button>
+
+</body>
+</html>

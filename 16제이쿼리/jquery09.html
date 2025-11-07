@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 제이쿼리 링크 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    /api/v1/getInfo
+
+    <script>
+        //get방식 쓰려면 data는 속성은 x, contentType x, 데이터는 주소에 담음
+        
+        $.ajax({
+            type: "post", //요청타입 - get, post
+            url: "http://localhost:8181/chap06/getJSON", 
+            contentType: "application/json", //보내는 데이터타입 (필수)
+            data: JSON.stringify({name: "홍길동", num: 1}),
+            success: function(data) {
+                console.log(data); //success
+            },
+            error: function(err) {
+                console.log(err);
+                
+            }
+        })
+    </script>
+</body>
+</html>
