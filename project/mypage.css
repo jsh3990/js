@@ -31,16 +31,26 @@ body {
     align-items: center;
 }
 
-.menu .top {
+.top {
     display: flex;
     flex-direction: column;
-    gap: 40px;
 }
 
-.menu .bottom {
+.top div {
+    margin-bottom: 40px;
+}
+
+.bottom {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+}
+
+.bottom div {
+    margin-bottom: 40px;
+}
+
+.bottom > div:last-child {
+    margin-bottom: 0;
 }
 
 /* 메인페이지 */
@@ -59,11 +69,12 @@ body {
     align-items: center;       
     justify-content: center;    
     gap: 70px;                  
-    background: #eee; 
+    background: #fff2c8; 
     padding: 20px;
     border-radius: 10px;
 
-    /* position: fixed; */
+    position: sticky; 
+    top: 20px;
 }
 
 
@@ -126,7 +137,7 @@ body {
     width: 1500px;                 
     background: #fafafa;
     padding: 20px;
-    border: 1px solid #777;
+    border: 1px solid #d7d7d7;
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
